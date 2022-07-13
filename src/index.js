@@ -1,3 +1,8 @@
+const dictionary = require("./js/threshold.js");
+
+
+console.log(dictionary);
+
 /**
  * easter-egg tribute to the early web
  * We don't know what we're doing with the css and design so
