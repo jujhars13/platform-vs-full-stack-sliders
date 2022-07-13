@@ -10,6 +10,9 @@ Visualising when you should rely on a platform team vs build it you run it
 # install dev and app deps
 npm install
 
+# run tests
+npm test
+
 # in the root of the repo
 node_modules/.bin/webpack --watch
 (cd docs && reload -e "html|js|css|json|yml")
