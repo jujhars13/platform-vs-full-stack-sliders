@@ -1,5 +1,8 @@
-# platform-vs-full-stack-sliders
-Visualising when you should rely on a platform team vs build it you run it
+# Platform vs Full Stack Sliders
+
+[![CI](https://github.com/jujhars13/platform-vs-full-stack-sliders/actions/workflows/test.yml/badge.svg)](https://github.com/jujhars13/platform-vs-full-stack-sliders/actions/workflows/test.yml)
+
+Browser based tool which helps to visualise when you should rely on a platform team vs "build it you run it"
 
 ## Local Dev
 
