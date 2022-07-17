@@ -1,60 +1,67 @@
+
+/**
+ * score
+ * low=1
+ * medium=2
+ * high=3
+ */
 const dictionary = [
   // low team, low complexity, they still might mess things up
   {
-    teamCapabilitiesScore: "low",
-    problemComplexityScore: "low",
+    teamCapabilitiesScore: 1,
+    problemComplexityScore: 1,
     expectedThreshHoldValue: 3,
   },
   // low team, medium complexity, they will need some support
   {
-    teamCapabilitiesScore: "low",
-    problemComplexityScore: "medium",
+    teamCapabilitiesScore: 1,
+    problemComplexityScore: 2,
     expectedThreshHoldValue: 4,
   },
   // low team, high complexity, they're defo gonna need support
   {
-    teamCapabilitiesScore: "low",
-    problemComplexityScore: "high",
+    teamCapabilitiesScore: 1,
+    problemComplexityScore: 3,
     expectedThreshHoldValue: 5,
   },
   // medium team, low complexity
   {
-    teamCapabilitiesScore: "medium",
-    problemComplexityScore: "low",
+    teamCapabilitiesScore: 2,
+    problemComplexityScore: 1,
     expectedThreshHoldValue: 1,
   },
   // medium team, medium complexity,
   // might need occasional support probably from an enabling team
   // it will be good to push them
   {
-    teamCapabilitiesScore: "medium",
-    problemComplexityScore: "medium",
+    teamCapabilitiesScore: 2,
+    problemComplexityScore: 2,
     expectedThreshHoldValue: 3,
   },
   // medium team, high complexity, they're going to need support
   {
-    teamCapabilitiesScore: "medium",
-    problemComplexityScore: "high",
+    teamCapabilitiesScore: 2,
+    problemComplexityScore: 3,
     expectedThreshHoldValue: 5,
   },
   // high team, low complexity
   {
-    teamCapabilitiesScore: "high",
-    problemComplexityScore: "low",
+    teamCapabilitiesScore: 3,
+    problemComplexityScore: 1,
     expectedThreshHoldValue: 1,
   },
   // high team, medium complexity
   {
-    teamCapabilitiesScore: "high",
-    problemComplexityScore: "medium",
+    teamCapabilitiesScore: 3,
+    problemComplexityScore: 2,
     expectedThreshHoldValue: 2,
   },
   // high team, high complexity,
   // will need some support maybe just enablement
   // but if you put them in a "golden cage" they will break out anyway
   {
-    teamCapabilitiesScore: "high",
-    problemComplexityScore: "high",
+    teamCapabilitiesScore: 3,
+    problemComplexityScore: 3,
     expectedThreshHoldValue: 3,
   },
 ];
