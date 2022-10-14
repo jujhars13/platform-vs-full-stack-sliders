@@ -1,17 +1,21 @@
 const thresholdDictionary = require("./js/threshold.js");
-let teamCapabilityScore = 3;
-let domainComplexityScore = 3;
+const teamCapabilitySlider = document.getElementById("team-capability");
+const domainComplexitySlider = document.getElementById("domain-complexity");
+let teamCapabilityScore = parseInt(teamCapabilitySlider.value);
+let domainComplexityScore = parseInt(domainComplexitySlider.value);
+
 const gauge = new JustGage({
   id: "gauge", // the id of the html element
-  value: 2.5,
-  min: 0,
+  value: 3,
+  min: 1,
   max: 5,
-  decimals: 2,
+  decimals: 0,
   gaugeWidthScale: 0.6,
   shadowSize: 5,
   shadowVerticalOffset: 3,
   shadowOpacity: 0.3,
 });
+renderGaugeValues(teamCapabilityScore, domainComplexityScore);
 
 function renderGaugeValues(tCScore = 1, dCScore = 1) {
   // lookup threshold value from data dictionary
@@ -21,12 +25,11 @@ function renderGaugeValues(tCScore = 1, dCScore = 1) {
       el.domainComplexityScore === dCScore
     );
   });
-  gauge.refresh(matchedElement.expectedThreshHoldValue);
+  console.log(matchedElement);
+  gauge.refresh(matchedElement.expectedThreshHoldValue, undefined, undefined, "label");
 }
 
 // attach event to slider change
-const teamCapabilitySlider = document.getElementById("team-capability");
-const domainComplexitySlider = document.getElementById("domain-complexity");
 teamCapabilitySlider.oninput = function () {
   teamCapabilityScore = parseInt(this.value);
   renderGaugeValues(teamCapabilityScore, domainComplexityScore);
